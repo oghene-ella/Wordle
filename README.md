@@ -21,3 +21,15 @@ A simple Wordle game built using Swift and UIKit. This project replicates the co
 - `KeyboardController.swift` → Manages keyboard input  
 - `KeyboardCell.swift` → Defines tapable letter keys  
 - `LetterCell.swift` → Displays guessed letters and updates styling based on correctness  
+
+
+## **Features**
+✅  Keyboard Layout – Displays an interactive keyboard for user input.
+
+✅  Letter Selection – Tap on a keyboard letter to input it into the board.
+
+✅  Delete Function – Remove the last entered letter using the delete button.
+
+✅  Random Word Generation – A new goal word is randomly generated for each game session.
+
+✅  Launch Screen & App Icon – Custom branding with a splash screen and app icon.
