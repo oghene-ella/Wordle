@@ -20,8 +20,6 @@ class KeyboardCell: UICollectionViewCell {
   }
 
   func configure(with string: String) {
-    labelContainerView.layer.cornerRadius = 4.0
-    labelContainerView.backgroundColor = .gray
     /* Exercise 2:
       1. Assign the argument `string` to the `self.string` private property (see line 14)
       2. Change the text of the label to the value of the passed in string
@@ -43,7 +41,13 @@ class KeyboardCell: UICollectionViewCell {
   @objc private func didTapString() {
     // START YOUR CODE HERE
       didSelectString?(string)
-    // ...
+      UIView.animate(withDuration: 0.1, animations: {
+            self.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+          }) { _ in
+            UIView.animate(withDuration: 0.1) {
+              self.transform = CGAffineTransform.identity
+            }
+          }
     // END YOUR CODE HERE
   }
 }

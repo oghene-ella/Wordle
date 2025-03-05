@@ -36,7 +36,6 @@ class KeyboardController: NSObject,
     let letter = keyboardRows[indexPath.section][indexPath.row]
     cell.configure(with: letter)
     
-    // Pass in the closure to handle tap
     cell.didSelectString = { [weak self] selectedLetter in
          self?.didSelectString?(selectedLetter)
      }
@@ -44,7 +43,6 @@ class KeyboardController: NSObject,
     return cell
   }
 
-  // MARK: - Private Methods
   func numItems(in row: Int) -> Int {
     return keyboardRows[row].count
   }
